@@ -229,7 +229,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- listen for the godot server if opened in a directory with a project.godot
-local dotgd = vim.fn.getcwd() .. '/project.gd'
+local dotgd = vim.fn.getcwd() .. '/project.godot'
 if vim.loop.fs_stat(dotgd) then
   vim.fn.serverstart './.godothost'
 end
