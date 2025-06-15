@@ -1,4 +1,4 @@
---[[
+--[[init
 
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
@@ -231,7 +231,7 @@ vim.opt.rtp:prepend(lazypath)
 -- listen for the godot server if opened in a directory with a project.godot
 local dotgd = vim.fn.getcwd() .. '/project.godot'
 if vim.loop.fs_stat(dotgd) then
-  vim.fn.serverstart './.godothost'
+  vim.fn.serverstart './godothost'
 end
 
 -- escape insert mode with j, k key combo
