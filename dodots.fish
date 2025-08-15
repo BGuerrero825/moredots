@@ -15,8 +15,8 @@ else if [ $argv[1] = "pull" ]
 	git fetch
 	git pull
 	rsync -avz ~/dev/moredots/.tmux.conf ~/.tmux.conf ;
-	rsync -avz ~/dev/moredots/fish ~/.config/fish ;
-	rsync -avz ~/dev/moredots/kitty ~/.config/kitty ;
+	rsync -avz ~/dev/moredots/fish ~/.config/ ;
+	rsync -avz ~/dev/moredots/kitty ~/.config/ ;
 	echo "[+] dots pulled!"
 else
 	echo "Would you like to 'push' or 'pull' dots?"
