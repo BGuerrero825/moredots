@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-if $argv[1] == "push"
+if [ $argv[1] = "push" ] 
 	cd ~/dev/moredots
 	git fetch
 	git pull
@@ -10,7 +10,7 @@ if $argv[1] == "push"
 	git push
 	echo "[+] dots pushed!"
 
-else if $argv[1] == "pull"
+else if [ $argv[1] = "pull" ]
 	cd ~/dev/moredots
 	git fetch
 	git pull
