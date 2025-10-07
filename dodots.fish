@@ -18,6 +18,8 @@ else if [ $argv[1] = "pull" ]
 	rsync -avz ~/dev/moredots/fish ~/.config/ ;
 	rsync -avz ~/dev/moredots/kitty ~/.config/ ;
 	echo "[+] dots pulled!"
+
 else
 	echo "Would you like to 'push' or 'pull' dots?"
+
 end
