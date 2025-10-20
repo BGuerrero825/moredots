@@ -4,7 +4,7 @@ if [ $argv[1] = "push" ]
 	cd ~/dev/moredots
 	git fetch
 	git pull
-	rsync -avz ~/.tmux.conf ~/.config/kitty ~/.config/fish ~/dev/moredots ;
+	rsync -avz ~/.tmux.conf ~/.config/kitty ~/.config/fish ~/.local/share/fonts ~/dev/moredots ;
 	git add -u
 	git commit -m (hostname)": more dots!"
 	git push
@@ -17,6 +17,7 @@ else if [ $argv[1] = "pull" ]
 	rsync -avz ~/dev/moredots/.tmux.conf ~/.tmux.conf ;
 	rsync -avz ~/dev/moredots/fish ~/.config/ ;
 	rsync -avz ~/dev/moredots/kitty ~/.config/ ;
+	rsync -avz ~/dev/moredots/fonts ~/.local/share/ ;
 	echo "[+] dots pulled!"
 
 else
