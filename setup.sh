@@ -24,6 +24,8 @@ sudo chown -R $me:$me /usr/local
 cp -R ~/dev/moredots/nvim_0.11/bin/nvim /usr/local/bin/nvim
 cp -R ~/dev/moredots/nvim_0.11/lib/nvim /usr/local/lib/nvim
 cp -R ~/dev/moredots/nvim_0.11/share/nvim /usr/local/share/nvim
+# symlink vim to nvim adjacently
+ln -s /usr/local/bin/nvim /usr/local/bin/vim
 
 # pull and set my nvim kickstart config
 git clone https://github.com/BGuerrero825/kickstart.nvim.git ~/.config/nvim
