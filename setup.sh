@@ -10,23 +10,20 @@ me=$(whoami)
 sudo echo -e "\n# No password sudo\n$me ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/usernopass 1>/dev/null
 
 # get stuff
-sudo apt install fish kitty tmux gh
+sudo apt install git fish kitty tmux gh gcc
 
 # make home directories
 mkdir ~/gamedev
 mkdir ~/notes
 
-# nano default GTFO
-update-alternatives --config editor
-
 # put dots in .config locations
-fish dodots pull
+fish ~/dev/moredots/dodots.fish pull
 
 # put nvim 0.11 in /usr/local dirs
 sudo chown -R $me:$me /usr/local
-cp -R ~/dev/moredots/nvim_011/bin/nvim /usr/local/bin/nvim
-cp -R ~/dev/moredots/nvim_011/lib/nvim /usr/local/lib/nvim
-cp -R ~/dev/moredots/nvim_011/share/nvim /usr/local/share/nvim
+cp -R ~/dev/moredots/nvim_0.11/bin/nvim /usr/local/bin/nvim
+cp -R ~/dev/moredots/nvim_0.11/lib/nvim /usr/local/lib/nvim
+cp -R ~/dev/moredots/nvim_0.11/share/nvim /usr/local/share/nvim
 
 # pull and set my nvim kickstart config
 git clone https://github.com/BGuerrero825/kickstart.nvim.git ~/.config/nvim
@@ -34,4 +31,7 @@ git clone https://github.com/BGuerrero825/kickstart.nvim.git ~/.config/nvim
 # set git identity
 git config --global user.name "babu"
 git config --global user.email "bguerrero825@gmail.com"
+
+# nano default GTFO
+sudo update-alternatives --config editor
 
