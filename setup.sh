@@ -10,13 +10,13 @@ me=$(whoami)
 sudo echo -e "\n# No password sudo\n$me ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/usernopass 1>/dev/null
 
 # get stuff
-sudo apt install git fish kitty tmux gh gcc
+sudo apt install git fish kitty tmux gh gcc fzf
 
 # make home directories
 mkdir ~/gamedev
 mkdir ~/notes
 
-# put dots in .config locations
+# pull and put dots in .config locations
 fish ~/dev/moredots/dodots.fish pull
 
 # put nvim 0.11 in /usr/local dirs
