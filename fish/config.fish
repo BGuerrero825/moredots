@@ -3,7 +3,8 @@ if status is-interactive
 end
 
 set SHELL /usr/bin/fish; export SHELL
-set SHELL /usr/bin/fish; export SHELL
 set VIMRUNTIME /usr/local/share/nvim/runtime; export VIMRUNTIME
-fish_add_path ~/.cargo
 set fish_greeting
+if test -d "$HOME/.cargo"
+    source "$HOME/.cargo/env.fish"
+end
