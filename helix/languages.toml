@@ -44,7 +44,8 @@ name = "gdscript"
 language-servers = ["godot"]
  
 # -- HTML -- 
-[[language]]
-name = "html"
-formatted = { command = "tidy", args = ["-q"] }
-auto-format = true
+# careful with this
+#[[language]]
+#name = "html"
+#formatter = { command = "tidy", args = ["-q", "-indent", "--indent-spaces", "2", "--tidy-mark", "no"] }
+#auto-format = true
