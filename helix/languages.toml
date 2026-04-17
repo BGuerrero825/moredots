@@ -1,0 +1,44 @@
+# ── C ────────────────────────────────────────────────────────────────
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+auto-format = true
+
+# ── C++ ──────────────────────────────────────────────────────────────
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+auto-format = true
+
+# ── Zig ──────────────────────────────────────────────────────────────
+[language-server.zls]
+command = "zls"
+
+[[language]]
+name = "zig"
+language-servers = ["zls"]
+auto-format = true
+
+# ── Rust ─────────────────────────────────────────────────────────────
+[language-server.rust-analyzer.config]
+check = { command = "clippy" }
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+auto-format = true
+
+# ── Python ───────────────────────────────────────────────────────────
+[[language]]
+name = "python"
+language-servers = ["pylsp"]
+auto-format = true
+
+# ── GDScript (Godot 4) ───────────────────────────────────────────────
+[language-server.godot]
+command = "nc"
+args = ["127.0.0.1", "6005"]
+
+[[language]]
+name = "gdscript"
+language-servers = ["godot"]
