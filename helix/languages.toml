@@ -1,16 +1,16 @@
-# ── C ────────────────────────────────────────────────────────────────
+# -- C -- 
 [[language]]
 name = "c"
 language-servers = ["clangd"]
 auto-format = true
 
-# ── C++ ──────────────────────────────────────────────────────────────
+# -- C++ -- 
 [[language]]
 name = "cpp"
 language-servers = ["clangd"]
 auto-format = true
 
-# ── Zig ──────────────────────────────────────────────────────────────
+# -- Zig -- 
 [language-server.zls]
 command = "zls"
 
@@ -19,7 +19,7 @@ name = "zig"
 language-servers = ["zls"]
 auto-format = true
 
-# ── Rust ─────────────────────────────────────────────────────────────
+# -- Rust -- 
 [language-server.rust-analyzer.config]
 check = { command = "clippy" }
 
@@ -28,13 +28,13 @@ name = "rust"
 language-servers = ["rust-analyzer"]
 auto-format = true
 
-# ── Python ───────────────────────────────────────────────────────────
+# -- Python -- 
 [[language]]
 name = "python"
 language-servers = ["pylsp"]
 auto-format = true
 
-# ── GDScript (Godot 4) ───────────────────────────────────────────────
+# -- GDScript (Godot 4) -- 
 [language-server.godot]
 command = "nc"
 args = ["127.0.0.1", "6005"]
@@ -42,3 +42,9 @@ args = ["127.0.0.1", "6005"]
 [[language]]
 name = "gdscript"
 language-servers = ["godot"]
+ 
+# -- HTML -- 
+[[language]]
+name = "html"
+formatted = { command = "tidy", args = ["-q"] }
+auto-format = true
