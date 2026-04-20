@@ -1,6 +1,7 @@
 theme = "gruvbox"
 
 [editor]
+cursorline = true
 color-modes = true
 scrolloff = 8
 

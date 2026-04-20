@@ -13,7 +13,7 @@ sudo echo -e "\n# No password sudo\n$me ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /e
 # get stuff
 sudo apt install git fish kitty tmux gh gcc fzf 
 # LSPs
-sudo apt install python3-lsp clang clangd
+sudo apt install python3-pylsp clang clangd
 # others TBD...
 
 # TODO untar and link included binaries
