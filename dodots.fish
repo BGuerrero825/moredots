@@ -18,7 +18,6 @@ else if [ $argv[1] = pull ]
     rsync -avz ~/dev/moredots/fish ~/.config/
     rsync -avz ~/dev/moredots/kitty ~/.config/
     rsync -avz ~/dev/moredots/helix ~/.config/
-    rsync -avz ~/dev/moredots/fonts ~/.local/share/
     echo "[+] dots pulled!"
 
 else
